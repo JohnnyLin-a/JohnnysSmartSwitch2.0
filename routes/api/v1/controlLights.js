@@ -18,7 +18,7 @@ const controlLights = control => {
     // TP-Link
     const client = new Client();
     client.startDiscovery().on('device-new', (device) => {
-        device.setPowerState(true);
+        device.setPowerState(power);
     });
 };
 
