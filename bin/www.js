@@ -4,6 +4,9 @@
  * Module dependencies.
  */
 
+const dotenv = require('dotenv');
+const envFound = dotenv.config();
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = require('../app');
 var debug = require('debug')('johnnyssmartswitch:server');
 var http = require('http');
