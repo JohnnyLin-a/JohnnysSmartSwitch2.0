@@ -668,9 +668,10 @@ statuses@~1.4.0:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
   integrity sha512-zhSCtt8v2NDrRlPQpCNtw/heZLtfUDqxBM1udqikb/Hbk52LK4nQSwr10u77iopCW5LsyHpuXS0GnEc48mLeew==
 
-tplink-smarthome-api@JohnnyLin-a/tplink-smarthome-api:
+tplink-smarthome-api@^3.3.0:
   version "3.3.0"
-  resolved "https://codeload.github.com/JohnnyLin-a/tplink-smarthome-api/tar.gz/b73d6809ed6028c7ef37f36eb744a0e7c93fbee6"
+  resolved "https://registry.yarnpkg.com/tplink-smarthome-api/-/tplink-smarthome-api-3.3.0.tgz#3d7598a568a29c7f6e55786fec3cf7a31ac8a815"
+  integrity sha512-AO8wmu/kRY2eB848YhaBKleBdQYi+UqJBJPaoj4dDTh56v1LDmBv4SNGEUmW9sLDqrRi5J+UV9Qky472KItD2w==
   dependencies:
     commander "^7.1.0"
     lodash.castarray "^4.4.0"
