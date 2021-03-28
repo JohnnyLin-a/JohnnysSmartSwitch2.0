@@ -121,6 +121,16 @@ commander@2.8.x:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
+commander@^2.20.0:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
+
+commander@^7.1.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
+  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
+
 commander@~2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
@@ -327,6 +337,11 @@ is-buffer@^1.1.5:
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
+is-plain-obj@^1.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
+  integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
+
 is-promise@^2.0.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.2.2.tgz#39ab959ccbf9a774cf079f7b40c7a26f763135f1"
@@ -373,10 +388,52 @@ lazy-cache@^1.0.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
+lodash.castarray@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.castarray/-/lodash.castarray-4.4.0.tgz#c02513515e309daddd4c24c60cfddcf5976d9115"
+  integrity sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=
+
+lodash.clone@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-4.5.0.tgz#195870450f5a13192478df4bc3d23d2dea1907b6"
+  integrity sha1-GVhwRQ9aExkkeN9Lw9I9LeoZB7Y=
+
+lodash.defaultto@^4.14.0:
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/lodash.defaultto/-/lodash.defaultto-4.14.0.tgz#38bd3d425acee733e0e2bbbd4e4b29711cc2ee11"
+  integrity sha1-OL09QlrO5zPg4ru9TkspcRzC7hE=
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
+lodash.groupby@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.groupby/-/lodash.groupby-4.6.0.tgz#0b08a1dcf68397c397855c3239783832df7403d1"
+  integrity sha1-Cwih3PaDl8OXhVwyOXg4Mt90A9E=
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
+loglevel@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.7.1.tgz#005fde2f5e6e47068f935ff28573e125ef72f197"
+  integrity sha512-Hesni4s5UkWkwCGJMQGAh71PaLUmKFM60dHvq0zi/vDhhrzuk+4GgNbTXJ12YYQJn6ZKBDNIjYcuQGKudvqrIw==
+
 longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
   integrity sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=
+
+magic-home@JohnnyLin-a/node-magichome:
+  version "2.6.1"
+  resolved "https://codeload.github.com/JohnnyLin-a/node-magichome/tar.gz/50b639c92678506c19b70dcbb0ed30d6e7f115b7"
+  dependencies:
+    commander "^2.20.0"
+    merge-options "^1.0.1"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -387,6 +444,13 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
   integrity sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=
+
+merge-options@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/merge-options/-/merge-options-1.0.1.tgz#2a64b24457becd4e4dc608283247e94ce589aa32"
+  integrity sha512-iuPV41VWKWBIOpBsjoxjDZw8/GbSfZ2mk7N1453bwMrfzdrIk7EzBd+8UVR6rkw67th7xnk9Dytl3J+lHPdxvg==
+  dependencies:
+    is-plain-obj "^1.1"
 
 methods@~1.1.2:
   version "1.1.2"
@@ -471,6 +535,11 @@ path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+
+promise-queue@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/promise-queue/-/promise-queue-2.2.5.tgz#2f6f5f7c0f6d08109e967659c79b88a9ed5e93b4"
+  integrity sha1-L29ffA9tCBCelnZZx5uIqe1ek7Q=
 
 promise@^6.0.1:
   version "6.1.0"
@@ -598,6 +667,26 @@ statuses@~1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
   integrity sha512-zhSCtt8v2NDrRlPQpCNtw/heZLtfUDqxBM1udqikb/Hbk52LK4nQSwr10u77iopCW5LsyHpuXS0GnEc48mLeew==
+
+tplink-smarthome-api@JohnnyLin-a/tplink-smarthome-api:
+  version "3.3.0"
+  resolved "https://codeload.github.com/JohnnyLin-a/tplink-smarthome-api/tar.gz/b73d6809ed6028c7ef37f36eb744a0e7c93fbee6"
+  dependencies:
+    commander "^7.1.0"
+    lodash.castarray "^4.4.0"
+    lodash.clone "^4.5.0"
+    lodash.defaultto "^4.14.0"
+    lodash.get "^4.4.2"
+    lodash.groupby "^4.6.0"
+    lodash.isequal "^4.5.0"
+    loglevel "^1.7.1"
+    promise-queue "^2.2.5"
+    tplink-smarthome-crypto "^3.0.0"
+
+tplink-smarthome-crypto@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tplink-smarthome-crypto/-/tplink-smarthome-crypto-3.0.0.tgz#d078829111118093b3e8e4e028cd448fe2e8328f"
+  integrity sha512-LxRfcrFVeWNSNyLdVKl52x7jQmwvYengSXCpvEi7M5S8+N/FvVYP25+ol5QdGWKBac6fOklDdz30p+TkC6nydA==
 
 transformers@2.1.0:
   version "2.1.0"
