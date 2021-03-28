@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const config = require('../../../config');
 const { Discovery, Control } = require('magic-home');
+const { Client } = require('tplink-smarthome-api');
 
 const controlLights = control => {
     const power = control === 'open';
@@ -15,7 +16,10 @@ const controlLights = control => {
     });
 
     // TP-Link
-
+    const client = new Client();
+    client.startDiscovery().on('device-new', (device) => {
+        device.setPowerState(true);
+    });
 };
 
 router.get('/', function (req, res, next) {
