@@ -23,7 +23,6 @@ const controlLights = control => {
 };
 
 router.get('/', function (req, res, next) {
-    console.log(`req`, req.query);
     if (typeof req.query.control === 'undefined') {
         res.json({ success: false });
     }
