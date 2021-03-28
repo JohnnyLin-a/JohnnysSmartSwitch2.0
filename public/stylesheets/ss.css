@@ -1,0 +1,54 @@
+.mainMenuBtn {
+    height: calc(var(--vh, 1vh) * 10);
+}
+
+.yes-really-button.btn.btn-success.btn-block {
+    width: 25%;
+}
+
+.lights-buttons-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn.btn-success.btn-lg.btn-block.mainMenuBtn {
+    width: 50%;
+    margin-right: calc(var(--vh, 1vh) * 1);
+}
+
+.btn.btn-danger.btn-lg.btn-block.mainMenuBtn {
+    width: 50%;
+    margin-top: 0;
+    margin-left: calc(var(--vh, 1vh) * 1);
+}
+
+h1.main-title {
+    font-size: 4rem !important;
+    margin-bottom: 0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+div.jumbotron.text-center {
+    height: calc(var(--vh, 1vh) * 20);
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.main-buttons-container {
+    height: calc(var(--vh, 1vh) * 80);
+    justify-content: center;
+}
+
+.buttons-row {
+    margin-top: calc(var(--vh, 1vh) * 1);
+    margin-bottom: calc(var(--vh, 1vh) * 1);
+}
