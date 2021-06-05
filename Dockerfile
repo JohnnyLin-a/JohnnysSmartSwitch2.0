@@ -1,11 +1,12 @@
-FROM golang:1.15-alpine3.12 as go-builder
+FROM golang:1.16-alpine3.12 as go-builder
 WORKDIR /root/
-RUN apk add --no-cache git
-RUN go get github.com/johnnylin-a/go-wol/cmd/wol
-RUN go build github.com/johnnylin-a/go-wol/cmd/wol
+RUN apk update && apk add --no-cache git
+RUN git clone https://github.com/sabhiram/go-wol.git
+WORKDIR /root/go-wol
+RUN go build -o /root/wol ./cmd/wol
 
 
-FROM node:lts-alpine
+FROM node:16-alpine3.12
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install
