@@ -1,12 +1,11 @@
-var express = require('express');
-var router = express.Router();
-const { execFile, exec } = require("child_process");
-const config = require('../../../config');
+import { Router } from 'express';
+var router = Router();
+import { execFile, exec } from "child_process";
 
 router.get('/', function (req, res, next) {
-    execFile(`/root/wol`, ['wake', config.wolMacAddress, '-b', config.broadcastAddress], null, (error, stdout, stderr) => {
+    execFile(`/root/wol`, ['wake', process.env.WOL_MAC_ADDR, '-b', process.env.BROADCAST_ADDR], null, (error, stdout, stderr) => {
         res.json({ success: (error === null) });
     });
 });
 
-module.exports = router;
+export default router;

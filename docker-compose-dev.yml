@@ -7,7 +7,5 @@ services:
     container_name: ss_backend
     restart: unless-stopped
     volumes:
-      - "/app/node_modules"
-      - "./:/app"
-    ports:
-      - "3000:3000"
+      - "./:/root/app"
+    network_mode: host

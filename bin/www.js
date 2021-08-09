@@ -4,12 +4,13 @@
  * Module dependencies.
  */
 
-const dotenv = require('dotenv');
-const envFound = dotenv.config();
+import dotenv from 'dotenv';
+dotenv.config();
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-var app = require('../app');
-var debug = require('debug')('johnnyssmartswitch:server');
-var http = require('http');
+import app from '../app.js';
+import debug from 'debug';
+debug('johnnyssmartswitch:server');
+import { createServer } from 'http';
 
 /**
  * Get port from environment and store in Express.
@@ -22,7 +23,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.

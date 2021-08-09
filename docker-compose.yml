@@ -7,6 +7,5 @@ services:
     container_name: ss_backend
     restart: unless-stopped
     volumes:
-      - "/app/node_modules"
-      - "./:/app"
+      - "./:/root/app"
     network_mode: host

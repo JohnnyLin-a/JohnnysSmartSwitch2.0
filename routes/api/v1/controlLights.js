@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-const config = require('../../../config');
-const { Discovery, Control } = require('magic-home');
-const { Client } = require('tplink-smarthome-api');
+import { Router } from 'express';
+var router = Router();
+import { Discovery, Control } from 'magic-home';
+import tplinkapi from 'tplink-smarthome-api';
+const { Client } = tplinkapi;
 
 const controlLights = control => {
     const power = control === 'open';
@@ -40,4 +40,4 @@ router.get('/', function (req, res, next) {
     res.json({ success: true });
 });
 
-module.exports = router;
+export default router;

@@ -1,12 +1,12 @@
-var express = require('express');
-var router = express.Router();
+import { Router } from 'express';
+var router = Router();
 
 // paths within /api/v1
-var openMyComputer = require('./openMyComputer.js');
-var controlLights = require('./controlLights.js');
+import openMyComputer from './openMyComputer.js';
+import controlLights from './controlLights.js';
 
 // Router use
 router.use('/openMyComputer.php', openMyComputer);
 router.use('/controlLights.php', controlLights);
 
-module.exports = router;
+export default router;
