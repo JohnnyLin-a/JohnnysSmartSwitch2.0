@@ -1,1 +1,1 @@
-docker run --rm -w=/app -v $(pwd):/app node:16-alpine yarn install
+docker run --rm -w=/root/app -v $(pwd):/root/app node:16-alpine /bin/sh -c "npm install -g npm && yarn install && cd node_modules/tplink-smarthome-api && npm install"

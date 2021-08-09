@@ -8,8 +8,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 import app from '../app.js';
-import debug from 'debug';
-debug('johnnyssmartswitch:server');
 import { createServer } from 'http';
 
 /**
@@ -90,5 +88,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on', bind);
 }
