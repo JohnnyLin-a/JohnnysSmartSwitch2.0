@@ -35,7 +35,7 @@ server {
     # ssl_stapling on;
     # ssl_stapling_verify on;
 
-    # ssl_trusted_certificate /root/cert/chain.crt;
+    # ssl_trusted_certificate /root/cert/chain.pem;
 
     location / {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
