@@ -15,4 +15,5 @@ services:
     restart: unless-stopped
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/certs/:/root/cert/
     network_mode: host
