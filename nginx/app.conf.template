@@ -13,11 +13,11 @@ server {
 }
 
 server {
-    # listen 443 ssl http2;
-    # listen [::]:443 ssl http2;
+    # listen 8443 ssl;
+    # listen [::]:8443 ssl;
     
-    listen 443 http2;
-    listen [::]:443 http2;
+    listen 8443;
+    listen [::]:8443;
 
     root /www/;
 
