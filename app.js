@@ -22,7 +22,8 @@ app.use(function(req, res, next) {
   if (process.env.NODE_ENV === 'development') {
     next(createError(404));
   } else {
-    next(404);
+    res.status(404);
+    res.end();
   }
 
 });
