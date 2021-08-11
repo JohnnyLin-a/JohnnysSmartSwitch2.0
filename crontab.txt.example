@@ -1,1 +1,1 @@
-0 12 * * 1 ~/JohnnysSmartSwitch2.0/certbot.sh
+0 12 * * 1 cd ~/JohnnysSmartSwitch2.0 && ./certbot.sh
