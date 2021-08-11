@@ -4,11 +4,13 @@ import path from 'path';
 
 import indexRouter from './routes/index.js';
 import apiV1 from './routes/api/v1/index.js';
+import authenticatedMiddleware from './middlewares/authenticated.js';
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(authenticatedMiddleware);
 
 // Define routes here
 app.use('/', indexRouter);
