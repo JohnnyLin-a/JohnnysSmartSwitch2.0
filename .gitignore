@@ -4,5 +4,5 @@ nginx/conf.d/app.conf
 .certbot_tag
 crontab.txt
 .domain_name
-nginx/certs/*
+nginx/certs
 pg_data
