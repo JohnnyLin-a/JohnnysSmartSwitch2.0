@@ -1,41 +1,11 @@
 #!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
-import dotenv from 'dotenv';
-dotenv.config();
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 import app from '../app.js';
 import { createServer } from 'http';
+import Dbpool from '../pkg/dbpool/dbpool.js';
+new Dbpool(); // Create pool early 
 
-/**
- * Get port from environment and store in Express.
- */
-
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-var server = createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
+ const normalizePort = val => {
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -50,12 +20,19 @@ function normalizePort(val) {
 
   return false;
 }
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
 
 /**
- * Event listener for HTTP server "error" event.
+ * Create HTTP server.
  */
 
-function onError(error) {
+var server = createServer(app);
+
+
+server.listen(port);
+
+const onError = error => {
   if (error.syscall !== 'listen') {
     throw error;
   }
@@ -78,15 +55,14 @@ function onError(error) {
       throw error;
   }
 }
+server.on('error', onError);
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
+const onListening = () => {
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   console.log('Listening on', bind);
 }
+server.on('listening', onListening);
+

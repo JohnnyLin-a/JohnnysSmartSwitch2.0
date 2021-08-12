@@ -5,3 +5,4 @@ nginx/conf.d/app.conf
 crontab.txt
 .domain_name
 nginx/certs/*
+pg_data
