@@ -22,7 +22,7 @@ const controlLights = control => {
     });
 };
 
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
     if (typeof req.query.control === 'undefined') {
         res.json({ success: false });
     }

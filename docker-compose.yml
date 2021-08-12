@@ -8,6 +8,7 @@ services:
     restart: unless-stopped
     volumes:
       - "./:/root/app"
+    env_file: .env
     network_mode: host
   ss_nginx:
     image: nginx:alpine

@@ -7,4 +7,5 @@ RUN git clone --depth 1 https://github.com/johnnylin-a/go-wol.git && cd go-wol &
 FROM node:16-alpine
 WORKDIR /root/app
 COPY --from=go-builder /root/wol /root/
-CMD yarn start
+RUN yarn global add nodemon
+CMD nodemon -L ./bin/www.js 
