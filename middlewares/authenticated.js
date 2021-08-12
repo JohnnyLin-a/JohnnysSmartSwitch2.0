@@ -6,11 +6,11 @@ const router = Router();
 router.use(async (req, res, next) => {
     const dbpool = new Dbpool().getInstance();
     console.log("Connection", req.get("X-Real-IP"));
-    console.log('Signed Cookies: ', req.signedCookies);
 
     // Postgres on node sucks.
     dbpool.connect((err, client, done) => {
         if (err) {
+            console.log("cannot get pool's connection ???");
             res.status(418);
             res.end();
         };
@@ -21,6 +21,7 @@ router.use(async (req, res, next) => {
                 if (res.rows.length > 0) {
                     next();
                 } else {
+                    console.log("Random dude failed (has secret cookie)", req.get("X-Real-IP"));
                     res.status(418);
                     res.end();
                 }
@@ -52,6 +53,7 @@ router.use(async (req, res, next) => {
                         console.error(e.stack);
                     })
                 } else {
+                    console.log("Random dude failed (no cookie)", req.get("X-Real-IP"));
                     res.status(418);
                     res.end();
                 }
