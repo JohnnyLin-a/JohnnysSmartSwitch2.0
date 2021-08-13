@@ -6,7 +6,7 @@
    - .certbot_tag
    - crontab.txt
    - .domain_name
-2. ./setup.sh
+2. ./setup.sh or ./setup_local.sh
 3. ./setup_pg.sh
 4. ./setup_certbot.sh
 5. setup crontab (following crontab.txt.example)
