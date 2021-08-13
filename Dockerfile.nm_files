@@ -1,0 +1,7 @@
+FROM node:16-alpine AS files
+WORKDIR /root/app/
+COPY package.json yarn.lock /root/app/
+RUN npm install -g npm && yarn install && cd node_modules/tplink-smarthome-api && npm install
+
+FROM alpine:latest
+COPY --from=files /root/app/node_modules /root/node_modules/
